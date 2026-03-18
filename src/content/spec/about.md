@@ -8,7 +8,7 @@
 
 ### 🌿 关于本站
 
-这个博客基于 **Astro + Fuwari** 构建，感谢 [@saicaca](https://github.com/saicaca) 的优秀主题，以及 [@CuteLeaf](https://github.com/CuteLeaf) 的 Firefly 模板带来的灵感启发。
+这个博客基于 **Astro + Fuwari** 构建，感谢 [@CuteLeaf](https://github.com/CuteLeaf) 的优秀主题**Firefly**。
 
 取名 **“熵火燎野”**，源自《后汉书》：“爝火虽微，卒能燎野”——微小的事物，终有燎原之日。而“熵”字，是我对秩序与混乱之间永恒博弈的一点私心。
 
