@@ -71,17 +71,17 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 是否允许用户通过控制面板切换横幅标题显示
 			switchable: true,
 			// 主页横幅主标题
-			title: "Lovely firefly!",
+			title: "友野 · YouyEr",
 			// 主页横幅主标题字体大小
 			titleSize: "3.8rem",
 			// 主页横幅副标题
 			subtitle: [
-				"In Reddened Chrysalis, I Once Rest",
-				"From Shattered Sky, I Free Fall",
-				"Amidst Silenced Stars, I Deep Sleep",
-				"Upon Lighted Fyrefly, I Soon Gaze",
-				"From Undreamt Night, I Thence Shine",
-				"In Finalized Morrow, I Full Bloom",
+				"In Dew-Kissed Wild, I Wake",        // 在晨露轻吻的原野，我醒来
+				"From Sparking Embers, I Rise",       // 从闪烁的余烬中，我升起
+				"Amidst Silent Entropy, I Wait",      // 在寂静的熵增中，我等待
+				"Upon Blazing Wildfire, I Gaze",      // 面对燃烧的野火，我凝视
+				"From Ashen Ground, I Reborn",        // 从灰烬之地，我重生
+				"In Endless Cycles, I Return"         // 在无尽的循环中，我归来
 			],
 			// 主页横幅副标题字体大小
 			subtitleSize: "1.5rem",

@@ -3,7 +3,7 @@ title: Git同步Fork仓库实记&完整指南：以Firefly主题为例
 published: 2026-03-19
 pinned: false
 description: "详细记录如何将Fork的GitHub仓库与原仓库同步，包括配置upstream、合并更新、解决冲突的完整流程。"
-image: "./cover.avif"
+image: https://t.alcy.cc/pc
 tags: ["Git", "GitHub", "Fork", "版本控制", "教程"]
 category: 技术指南
 draft: false
