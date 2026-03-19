@@ -11,7 +11,12 @@ draft: false
 
 ## 部署步骤
 
-先克隆Firefly仓库》再clone新仓库到本地》修改配置》推送到Github》部署到Vercel》修改域名（可选）
+》先 `Fork` Firefly 项目仓库
+》再 `clone` 新仓库到本地
+》修改配置
+》推送到 Github
+》部署到 Vercel
+》修改域名（可选）
 
 ## “工具”展示
 

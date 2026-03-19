@@ -21,6 +21,14 @@ export const galleryConfig: GalleryConfig = {
 			date: "2026-01-01",
 			tags: ["崩坏星穹铁道", "流萤"],
 		},
+				{
+			id: "photo-2026",
+			name: "拍摄",
+			description: "",
+			location: "地球",
+			date: "2026-01-01",
+			tags: ["小米14Ultra", "索尼A6000"],
+		},
 	],
 
 	// 瀑布流最小列宽(px)，浏览器根据容器宽度自动计算列数，默认 240
