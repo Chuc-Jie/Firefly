@@ -1,6 +1,7 @@
 ---
 title: Python 版本选择与安装细节完全指南
 published: 2025-04-03
+image: "api"
 tags: [Python,教程]
 category: 教程
 draft: false

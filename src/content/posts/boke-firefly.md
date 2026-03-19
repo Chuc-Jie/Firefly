@@ -3,9 +3,9 @@ title: 使用Firefly主题部署博客
 published: 2026-03-18
 pinned: false
 description: 利用 Vercel 这个能无缝对接GitHub的前端云平台，你可以将这款基于Astro的 Firefly 主题博客一键部署上线，并自动获得全球加速访问。
+image: "api"
 tags: [Markdown, Firefly, 博客, 主题, 模板]
 category: 教程
-image: ./images/firefly2.avif
 draft: false
 ---
 

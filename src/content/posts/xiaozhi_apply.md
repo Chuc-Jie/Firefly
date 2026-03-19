@@ -2,6 +2,7 @@
 title: 小智AI硬件部署实记
 published: 2025-05-01
 description: ESP32-S3开发板实现AI语音助手全流程指南
+image: "api"
 tags: [AI, 物联网, ESP32]
 category: 实践
 draft: false 

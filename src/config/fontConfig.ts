@@ -22,6 +22,15 @@ export const fontConfig = {
 				"system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
 		},
 
+		// 鸿蒙字体 - 使用CDN样式表
+		"harmonyos-sans": {
+			id: "harmonyos-sans",
+			name: "鸿蒙字体",
+			src: "https://cdn.hmos.dongs.xyz/css/harmonyos_sans_sc.css",
+			family: "HarmonyOS Sans SC",
+			display: "swap" as const,
+		},
+
 		// Google Fonts - Zen Maru Gothic
 		"zen-maru-gothic": {
 			id: "zen-maru-gothic",
