@@ -33,12 +33,12 @@ export const profileConfig: ProfileConfig = {
 			url: "https://github.com/Chuc-Jie",
 			showName: false,
 		},
-		// {
-		// 	name: "Email",
-		// 	icon: "fa7-solid:envelope",
-		// 	url: "mailto:xiaye@msn.com",
-		// 	showName: false,
-		// },
+		{
+			name: "Email",
+			icon: "fa7-solid:envelope",
+			url: "mailto:xkj@youyer.top",
+			showName: false,
+		},
 		{
 			name: "RSS",
 			icon: "fa7-solid:rss",

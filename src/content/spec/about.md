@@ -36,7 +36,7 @@
 
 - 🌐 博客：[https://blog.youyer.top/](https://blog.youyer.top/)
 - 💻 GitHub：[https://github.com/Chuc-Jie](https://github.com/Chuc-Jie)
-- ✉️ 邮箱：[等待填写]
+- ✉️ 邮箱：[xkj@youyer.top](mailto:xkj@youyer.top)
 
 ---
 
