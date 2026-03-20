@@ -4,7 +4,7 @@ published: 2026-03-20
 description: 无需服务器，本文手把手教你用阿里云免费企业邮实现自定义域名邮箱的收发功能。
 image: api
 tags: [阿里云, 域名邮箱, 免费教程, 企业邮箱]
-category: 技术教程
+category: 教程
 draft: false
 ---
 
