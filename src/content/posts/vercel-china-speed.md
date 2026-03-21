@@ -4,7 +4,7 @@ published: 2026-03-21
 description: 使用 enhanced-FaaS-in-China 免费方案加速国内访问部署在 Vercel 上的项目
 image: api
 tags: [阿里云, Vercel, 加速]
-category: 教程, 记录
+category: 教程
 draft: false
 ---
 
