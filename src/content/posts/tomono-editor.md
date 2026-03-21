@@ -10,6 +10,8 @@ draft: false
 comment: true
 ---
 
+::github{repo="Chuc-Jie/tomono-editor"}
+
 一个优雅、功能强大的 Markdown 文章编辑器，专为博客作者和内容创作者设计。支持 Front-matter 元数据管理、实时预览、深色模式、本地草稿保存、导入导出等功能，开箱即用。
 
 ## 特性
