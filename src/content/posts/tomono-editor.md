@@ -3,13 +3,12 @@ title: 友野 · 工坊 文档编辑器
 published: 2026-03-21
 pinned: false
 description: 一个针对本博客写的编辑器（由AI辅助编写）
+images: api
 tags: ["编辑器", "快捷", "markdown", "文档"]
 category: 前端开发
 draft: false
 comment: true
 ---
-
-# 友野 · 工坊 文章编辑器
 
 一个优雅、功能强大的 Markdown 文章编辑器，专为博客作者和内容创作者设计。支持 Front-matter 元数据管理、实时预览、深色模式、本地草稿保存、导入导出等功能，开箱即用。
 
