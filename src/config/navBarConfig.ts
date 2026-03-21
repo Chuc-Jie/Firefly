@@ -71,6 +71,22 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 				external: true,
 				icon: "material-symbols:link",
 			},
+			{
+				name: "脚本猫脚本",
+				url: "/scriptcat/",
+				icon: "material-symbols:link",
+				children: [
+					{
+						name: "User-Agent",
+						url: "https://gua.youyer.top",
+						external: true,
+						icon: "material-symbols:link",
+					},
+					// 其他子项...
+				],
+			}
+
+
 		]
 	});
 
@@ -85,7 +101,15 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 
 			// 关于页面
 			LinkPreset.About,
+		],
+	});
 
+	// 链接及其子菜单
+	links.push({
+		name: "链接",
+		url: "/links/",
+		icon: "material-symbols:link",
+		children: [
 			// 主题相关
 			{
 				name: "Firefly",
