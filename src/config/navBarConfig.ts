@@ -39,8 +39,19 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 
 			// 根据配置决定是否添加番组计划，在siteConfig关闭pages.bangumi时导航栏不显示番组计划
 			...(siteConfig.pages.bangumi ? [LinkPreset.Bangumi] : []),
+
 		],
 	});
+
+	// 根据配置决定是否添加编辑器，在siteConfig关闭pages.editor不显示编辑器
+	if (siteConfig.pages.editor) {
+		links.push({
+		name: "编辑器",
+		url: "https://bwrite.youyer.top/",
+		external: true,
+		icon: "material-symbols:edit",
+		});
+	}
 
 	// 关于及其子菜单
 	links.push({
@@ -58,7 +69,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 
 	// 自定义导航栏链接,并且支持多级菜单
 	links.push({
-		name: "链接",
+		name: "关于主题",
 		url: "/links/",
 		icon: "material-symbols:link",
 
