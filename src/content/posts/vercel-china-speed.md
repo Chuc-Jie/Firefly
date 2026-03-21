@@ -1,6 +1,6 @@
 ---
 title: 加速 Vercel 国内访问
-published: 2026-03-20
+published: 2026-03-21
 description: 加速 Vercel 国内访问：使用 enhanced-FaaS-in-China 免费方案
 image: api
 tags: [阿里云, Vercel]
