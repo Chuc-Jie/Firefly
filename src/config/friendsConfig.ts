@@ -24,7 +24,7 @@ export const friendsPageConfig: FriendsPageConfig = {
 export const friendsConfig: FriendLink[] = [
 		{
 		title: "Biomass_Fuel",
-		imgurl: "http://120.27.205.64:9090/assets/a.e26bc03b.webp",
+		imgurl: "https://q1.qlogo.cn/g?b=qq&nk=2564797255&s=640",
 		desc: "私はバンド楽しいっておもったこと、一度もない",
 		siteurl: "http://120.27.205.64:9090/",
 		tags: ["Friends"],
