@@ -27,7 +27,7 @@ export const friendsConfig: FriendLink[] = [
 		imgurl: "http://120.27.205.64:9090/assets/a.e26bc03b.webp",
 		desc: "私はバンド楽しいっておもったこと、一度もない",
 		siteurl: "http://120.27.205.64:9090/",
-		tags: ["Blog"],
+		tags: ["Friends"],
 		weight: 10, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},
