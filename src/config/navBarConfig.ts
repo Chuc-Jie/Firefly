@@ -43,15 +43,36 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		],
 	});
 
-	// 根据配置决定是否添加编辑器，在siteConfig关闭pages.editor不显示编辑器
-	if (siteConfig.pages.editor) {
-		links.push({
-		name: "编辑器",
-		url: "https://bwrite.youyer.top/",
-		external: true,
-		icon: "material-symbols:edit",
-		});
-	}
+	// // 根据配置决定是否添加编辑器，在siteConfig关闭pages.editor时不显示编辑器
+	// if (siteConfig.pages.editor) {
+	// 	links.push({
+	// 		name: "编辑器",
+	// 		url: "https://bwrite.youyer.top/",
+	// 		external: true,
+	// 		icon: "material-symbols:edit",
+	// 	});
+	// }
+
+	// 根据配置决定是否添加工坊,在siteConfig关闭pages.workshop时不显示工坊
+	links.push({
+		name: "工坊",
+		url: "/workshop/",
+		icon: "material-symbols:shop",
+		children: [
+			{
+				name: "编辑器",
+				url: "https://bwrite.youyer.top/",
+				external: true,
+				icon: "material-symbols:edit",
+			},
+			{
+				name: "User-Agent",
+				url: "https://gua.youyer.top",
+				external: true,
+				icon: "material-symbols:link",
+			},
+		]
+	});
 
 	// 关于及其子菜单
 	links.push({
@@ -64,17 +85,8 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 
 			// 关于页面
 			LinkPreset.About,
-		],
-	});
 
-	// 自定义导航栏链接,并且支持多级菜单
-	links.push({
-		name: "关于主题",
-		url: "/links/",
-		icon: "material-symbols:link",
-
-		// 子菜单
-		children: [
+			// 主题相关
 			{
 				name: "Firefly",
 				url: "https://github.com/CuteLeaf/Firefly",
