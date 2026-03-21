@@ -3,7 +3,7 @@ title: 友野 · 工坊 文档编辑器
 published: 2026-03-21
 pinned: false
 description: 一个针对本博客写的编辑器（由AI辅助编写）
-images: api
+image: api
 tags: ["编辑器", "快捷", "markdown", "文档"]
 category: 前端开发
 draft: false
