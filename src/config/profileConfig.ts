@@ -34,6 +34,12 @@ export const profileConfig: ProfileConfig = {
 			showName: false,
 		},
 		{
+			name: "BiliBili",
+			icon: "tabler:brand-bilibili",
+			url: "#",
+			showName: false,
+		},
+		{
 			name: "Email",
 			icon: "fa7-solid:envelope",
 			url: "mailto:xkj@youyer.top",
