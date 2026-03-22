@@ -10,3 +10,5 @@ description: 我收集和开发的脚本猫脚本集合
 ::scriptcat{id="5676" name="DeepSeek 代码块折叠"}
 
 ::scriptcat{id="4534" name="B站批量拉黑工具"}
+
+::scriptcat{id="5682" name="Vercel 汉化"}
