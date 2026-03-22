@@ -1,5 +1,5 @@
 ---
-title: 友野 · 工坊 文档编辑器
+title: 友野工坊 · 文章编辑器
 published: 2026-03-21
 pinned: false
 description: 一个针对本博客写的编辑器（由AI辅助编写）
