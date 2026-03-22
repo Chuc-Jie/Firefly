@@ -28,7 +28,7 @@ export function ScriptCatCardComponent(properties, children) {
   // 4. 构建卡片结构（完全静态，无数据请求）
   const titleBar = h("div", { class: "sc-titlebar" }, [
     h("div", { class: "sc-title" }, fallbackName),
-    h("div", { class: "sc-logo" }, "📜"),
+    h("div", { class: "sc-logo" }), 
   ]);
 
   const description = h("div", { class: "sc-description" }, "点击查看脚本详情 →");
