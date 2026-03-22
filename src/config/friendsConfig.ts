@@ -27,7 +27,7 @@ export const friendsConfig: FriendLink[] = [
 		imgurl: "https://q1.qlogo.cn/g?b=qq&nk=2564797255&s=640",
 		desc: "私はバンド楽しいっておもったこと、一度もない",
 		siteurl: "http://120.27.205.64:9090/",
-		tags: ["Friends"],
+		tags: ["Blog"],
 		weight: 10, // 权重，数字越大排序越靠前
 		enabled: true, // 是否启用
 	},

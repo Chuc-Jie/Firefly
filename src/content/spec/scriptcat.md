@@ -7,6 +7,8 @@ description: 我收集和开发的脚本猫脚本集合
 
 ## 脚本列表
 
+::scriptcat{id="5676"}
+
 DeepSeek 代码块折叠：[https://scriptcat.org/zh-CN/script-show-page/5676](https://scriptcat.org/zh-CN/script-show-page/5676)
 
 

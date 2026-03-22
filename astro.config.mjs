@@ -33,6 +33,7 @@ import rehypeEmailProtection from "./src/plugins/rehype-email-protection.mjs";
 import rehypeExternalLinks from "./src/plugins/rehype-external-links.mjs";
 import rehypeFigure from "./src/plugins/rehype-figure.mjs";
 import { remarkImageGrid } from "./src/plugins/remark-image-grid.js";
+import { ScriptCatCardComponent } from "./src/plugins/rehype-component-scriptcat-card.mjs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -208,6 +209,7 @@ export default defineConfig({
 				{
 					components: {
 						github: GithubCardComponent,
+						scriptcat: ScriptCatCardComponent,
 					},
 				},
 			],

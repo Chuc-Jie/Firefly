@@ -74,7 +74,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 			{
 				name: "脚本猫脚本",
 				url: "/scriptcat/",
-				icon: "material-symbols:link",
+				icon: "material-symbols:code",
 				children: [
 					{
 						name: "User-Agent",

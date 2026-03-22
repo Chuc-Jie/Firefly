@@ -440,3 +440,123 @@ a.card-github.fetch-error
     width: 32px
     height: 32px
     font-size: 16px
+
+
+
+// ==================== ScriptCat 卡片样式 ====================
+a.card-scriptcat
+  display: block
+  background: var(--license-block-bg)  // 复用 GitHub 卡片背景变量
+  position: relative
+  margin: 0.5rem 0
+  padding: 1.1rem 1.5rem
+  color: var(--tw-prose-body)
+  border-radius: var(--radius-large)
+  text-decoration-thickness: 0px
+  text-decoration-line: none
+
+  &:hover
+    background-color: var(--btn-regular-bg-hover)
+    .sc-titlebar
+      color: var(--btn-content)
+    .sc-installs, .sc-rating, .sc-description
+      color: var(--tw-prose-headings)
+      &:before
+        background-color: var(--tw-prose-headings)
+
+  &:active
+    scale: .98
+    background-color: var(--btn-regular-bg-active)
+
+  .sc-titlebar
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 0.5rem
+    color: var(--tw-prose-headings)
+    font-size: 1.25rem
+    font-weight: 500
+
+  .sc-title
+    font-weight: bold
+
+  .sc-version
+    font-size: 0.75rem
+    background: var(--bg-muted)
+    padding: 0.15rem 0.4rem
+    border-radius: 0.375rem
+    color: var(--text-tertiary)
+
+  .sc-description
+    margin-bottom: 0.7rem
+    font-size: 1rem
+    font-weight: 300
+    line-height: 1.5rem
+    color: var(--tw-prose-body)
+
+  .sc-infobar
+    display: flex
+    flex-flow: row nowrap
+    gap: 1.5rem
+    color: var(--tw-prose-body)
+    width: fit-content
+
+  .sc-installs, .sc-rating
+    font-weight: 500
+    font-size: 0.875rem
+    opacity: 0.9
+    &:before
+      content: ' '
+      display: inline-block
+      height: 1.3em
+      width: 1.3em
+      margin-right: .4rem
+      vertical-align: -.24em
+      font-size: inherit
+      background-color: var(--tw-prose-body)
+      overflow: visible
+      mask-size: contain
+      mask-position: center
+      mask-repeat: no-repeat
+      transition-property: background-color, background
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+      transition-duration: 0.15s
+
+  .sc-installs:before
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4v16h16'%3E%3C/path%3E%3Cpolyline points='20 10 12 18 4 10'%3E%3C/polyline%3E%3C/svg%3E")  // 下载图标
+
+  .sc-rating:before
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'%3E%3C/polygon%3E%3C/svg%3E")  // 星形
+
+  // 加载等待状态（如果组件中加入了 fetch-waiting 类）
+  &.fetch-waiting
+    pointer-events: none
+    opacity: 0.7
+    transition: opacity 0.15s ease-in-out
+    .sc-description, .sc-infobar
+      background-color: var(--tw-prose-body)
+      color: transparent
+      opacity: 0.5
+      animation: pulsate 2s infinite linear
+      user-select: none
+      &:before
+        background-color: transparent
+
+  &.fetch-error
+    pointer-events: all
+    opacity: 1
+
+// 复用 GitHub 卡片的动画
+@keyframes pulsate
+  0%
+    opacity: 0.15
+  50%
+    opacity: 0.25
+  100%
+    opacity: 0.15
+
+// 过渡效果复用
+.card-scriptcat, .sc-description, .sc-titlebar, .sc-installs, .sc-rating
+  transition-property: all
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+  transition-duration: 0.15s
