@@ -5,7 +5,7 @@ description: 介绍从Minecraft物品ID获取的方法探索
 image: api
 tags: [Minecraft, 游戏]
 category: 经验分享
-draft: true
+draft: false
 ---
 
 # Minecraft物品ID获取指南：从游戏内查看到官方数据生成器
