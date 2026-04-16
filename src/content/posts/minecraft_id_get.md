@@ -1,4 +1,14 @@
-# Minecraft 26.1+ 物品ID获取指南：从游戏内查看到官方数据生成器
+---
+title: Minecraft物品ID获取指南
+published: 2026-04-14
+description: 介绍从Minecraft物品ID获取的方法探索
+image: api
+tags: [Minecraft, 游戏]
+category: 经验分享
+draft: true
+---
+
+# Minecraft物品ID获取指南：从游戏内查看到官方数据生成器
 
 随着Minecraft Java版26.1（对应1.21.1左右）移除了代码混淆，很多依赖混淆映射表的工具和方法都变了。但好消息是，现在我们获取物品ID、方块ID的方式反而更直接、更官方了。
 
