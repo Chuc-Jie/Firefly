@@ -1,3 +1,5 @@
+// src\config\navBarConfig.ts
+
 import {
 	LinkPreset,
 	type NavBarConfig,

@@ -441,136 +441,203 @@ a.card-github.fetch-error
     height: 32px
     font-size: 16px
 
-
-
-// ==================== ScriptCat 卡片样式 ====================
-a.card-scriptcat
-  display: block
-  background: var(--license-block-bg)  // 复用 GitHub 卡片背景变量
+// PlantUML 图表样式（与 mermaid 视觉对齐，使用 CSS transform 实现 pan-zoom）
+.plantuml-diagram-container
   position: relative
-  margin: 0.5rem 0
-  padding: 1.1rem 1.5rem
-  color: var(--tw-prose-body)
-  border-radius: var(--radius-large)
-  text-decoration-thickness: 0px
-  text-decoration-line: none
+  margin: 1rem 0
+  border-radius: 0.75rem
+  overflow: hidden
+  background: var(--card-bg)
+  transition: all 0.3s ease
+  touch-action: none
 
   &:hover
-    background-color: var(--btn-regular-bg-hover)
-    .sc-titlebar
-      color: var(--btn-content)
-    .sc-installs, .sc-rating, .sc-description
-      color: var(--tw-prose-headings)
-      &:before
-        background-color: var(--tw-prose-headings)
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)
 
-  &:active
-    scale: .98
-    background-color: var(--btn-regular-bg-active)
+    .plantuml-controls
+      opacity: 1
 
-  .sc-titlebar
-    display: flex
-    align-items: center
-    justify-content: space-between
-    margin-bottom: 0.5rem
-    color: var(--tw-prose-headings)
-    font-size: 1.25rem
-    font-weight: 500
+.plantuml-wrapper
+  padding: 1.5rem
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100px
+  max-height: 420px
+  overflow: hidden
 
-  .sc-title
-    font-weight: bold
+.plantuml-image
+  max-width: 100%
+  max-height: 420px
+  height: auto
+  display: block
+  user-select: none
+  -webkit-user-drag: none
+  transition: transform 0.12s ease-out
+  will-change: transform
 
-  .sc-version
-    font-size: 0.75rem
-    background: var(--bg-muted)
-    padding: 0.15rem 0.4rem
-    border-radius: 0.375rem
-    color: var(--text-tertiary)
+.plantuml-loading
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 2rem
+  color: var(--text-color-secondary)
+  font-style: italic
 
-  .sc-description
-    margin-bottom: 0.7rem
-    font-size: 1rem
-    font-weight: 300
-    line-height: 1.5rem
-    color: var(--tw-prose-body)
+  &::before
+    content: ""
+    width: 20px
+    height: 20px
+    border: 2px solid var(--primary)
+    border-top: 2px solid transparent
+    border-radius: 50%
+    animation: spin 1s linear infinite
+    margin-right: 0.5rem
 
-  .sc-infobar
-    display: flex
-    flex-flow: row nowrap
-    gap: 1.5rem
-    color: var(--tw-prose-body)
-    width: fit-content
+.plantuml-error
+  color: var(--admonitions-color-warning)
+  background: rgba(239, 68, 68, 0.1)
+  border: 1px solid var(--admonitions-color-warning)
+  border-radius: 0.5rem
+  padding: 1rem
+  margin: 1rem
+  text-align: center
+  font-weight: 500
 
-  .sc-installs, .sc-rating
-    font-weight: 500
-    font-size: 0.875rem
-    opacity: 0.9
-    &:before
-      content: ' '
-      display: inline-block
-      height: 1.3em
-      width: 1.3em
-      margin-right: .4rem
-      vertical-align: -.24em
-      font-size: inherit
-      background-color: var(--tw-prose-body)
-      overflow: visible
-      mask-size: contain
-      mask-position: center
-      mask-repeat: no-repeat
-      transition-property: background-color, background
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
-      transition-duration: 0.15s
+  p
+    margin: 0 0 0.5rem 0
 
-  .sc-installs:before
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4v16h16'%3E%3C/path%3E%3Cpolyline points='20 10 12 18 4 10'%3E%3C/polyline%3E%3C/svg%3E")  // 下载图标
+  button
+    padding: 4px 12px
+    background: var(--primary)
+    color: white
+    border: none
+    border-radius: 4px
+    cursor: pointer
+    transition: all 0.2s ease
 
-  .sc-rating:before
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2'%3E%3C/polygon%3E%3C/svg%3E")  // 星形
+    &:hover
+      background: var(--primary-hover)
+      transform: translateY(-1px)
 
-  // 加载等待状态（如果组件中加入了 fetch-waiting 类）
-  &.fetch-waiting
-    pointer-events: none
-    opacity: 0.7
-    transition: opacity 0.15s ease-in-out
-    .sc-description, .sc-infobar
-      background-color: var(--tw-prose-body)
-      color: transparent
-      opacity: 0.5
-      animation: pulsate 2s infinite linear
-      user-select: none
-      &:before
-        background-color: transparent
+// 深色模式下的 PlantUML 容器背景
+.dark .plantuml-diagram-container
+  background: var(--card-bg)
 
-  &.fetch-error
-    pointer-events: all
+  .plantuml-image
+    filter: brightness(0.95)
+
+// PlantUML pan-zoom 控制栏
+.plantuml-controls
+  position: absolute
+  top: 8px
+  right: 8px
+  display: flex
+  gap: 4px
+  opacity: 0.5
+  transition: opacity 0.2s ease
+  z-index: 10
+
+  &:hover
     opacity: 1
 
-// 复用 GitHub 卡片的动画
-@keyframes pulsate
-  0%
-    opacity: 0.15
-  50%
-    opacity: 0.25
-  100%
-    opacity: 0.15
+.plantuml-ctrl-btn
+  width: 28px
+  height: 28px
+  border: none
+  border-radius: 6px
+  background: var(--btn-regular-bg)
+  color: var(--btn-content)
+  font-size: 14px
+  line-height: 28px
+  text-align: center
+  cursor: pointer
+  padding: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: all 0.15s ease
+  backdrop-filter: blur(8px)
 
-// 过渡效果复用
-.card-scriptcat, .sc-description, .sc-titlebar, .sc-installs, .sc-rating
-  transition-property: all
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
-  transition-duration: 0.15s
+  &:hover
+    background: var(--btn-regular-bg-hover)
+    transform: translateY(-1px)
 
+  &:active
+    background: var(--btn-regular-bg-active)
+    transform: translateY(0)
 
-.sc-logo
-  font-size: 1.25rem
-  &:before
-    content: ' '
-    display: inline-block
-    width: 1em
-    height: 1em
-    background-color: currentColor
-    mask-size: contain
-    mask-repeat: no-repeat
-    mask-image: url("data:image/png;base64,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")
-    
+// PlantUML 全屏遮罩
+.plantuml-fullscreen-overlay
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background: rgba(0, 0, 0, 0.85)
+  z-index: 9999
+  display: flex
+  align-items: center
+  justify-content: center
+
+.plantuml-fs-content
+  width: 90vw
+  height: 85vh
+  cursor: grab
+  display: flex
+  align-items: center
+  justify-content: center
+  background: rgba(255, 255, 255, 0.95)
+  overflow: hidden
+
+  &:active
+    cursor: grabbing
+
+  img
+    max-width: 100%
+    max-height: 100%
+    user-select: none
+    -webkit-user-drag: none
+    will-change: transform
+
+.plantuml-fs-controls
+  position: fixed
+  top: 16px
+  right: 16px
+  display: flex
+  gap: 6px
+  z-index: 10000
+  background: rgba(255, 255, 255, 0.1)
+  backdrop-filter: blur(12px)
+  padding: 6px
+  border-radius: 10px
+
+  .plantuml-ctrl-btn
+    width: 36px
+    height: 36px
+    font-size: 18px
+    border-radius: 8px
+    background: rgba(255, 255, 255, 0.15)
+    color: #fff
+
+    &:hover
+      background: rgba(255, 255, 255, 0.3)
+
+    &:active
+      background: rgba(255, 255, 255, 0.2)
+
+// 移动端 plantuml 控制栏与容器优化
+@media (max-width: 768px)
+  .plantuml-wrapper
+    padding: 1rem
+
+  .plantuml-image
+    max-height: 400px
+
+  .plantuml-controls
+    opacity: 0.8
+
+  .plantuml-ctrl-btn
+    width: 32px
+    height: 32px
+    font-size: 16px
