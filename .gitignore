@@ -37,3 +37,10 @@ Firefly-docs/
 cache/
 package/
 .obsidian/
+
+# Obsidian 忽略
+.obsidian/
+.trash/
+.DS_Store
+*.tmp
+*.bak
