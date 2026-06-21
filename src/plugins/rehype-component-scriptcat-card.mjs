@@ -1,6 +1,8 @@
 // src/plugins/rehype-component-scriptcat-card.mjs
+// Rehype plugin: 将 <scriptcat> 自定义元素渲染为卡片
 
 import { h } from "hastscript";
+import { visit, SKIP } from "unist-util-visit";
 
 export function ScriptCatCardComponent(properties, children) {
   // 1. 校验：短代码必须为空内容
@@ -28,7 +30,7 @@ export function ScriptCatCardComponent(properties, children) {
   // 4. 构建卡片结构（完全静态，无数据请求）
   const titleBar = h("div", { class: "sc-titlebar" }, [
     h("div", { class: "sc-title" }, fallbackName),
-    h("div", { class: "sc-logo" }), 
+    h("div", { class: "sc-logo" }),
   ]);
 
   const description = h("div", { class: "sc-description" }, "点击查看脚本详情 →");
@@ -45,4 +47,19 @@ export function ScriptCatCardComponent(properties, children) {
     },
     [titleBar, description]
   );
+}
+
+/**
+ * Rehype plugin: 遍历 hast 树，将 <scriptcat> 元素替换为卡片
+ */
+export default function rehypeScriptCatCard() {
+  return (tree) => {
+    visit(tree, (node, index, parent) => {
+      if (node.tagName === "scriptcat" && parent && index != null) {
+        const card = ScriptCatCardComponent(node.properties || {}, node.children);
+        parent.children.splice(index, 1, card);
+        return [SKIP, index];
+      }
+    });
+  };
 }

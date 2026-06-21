@@ -28,7 +28,7 @@ import { expressiveCodeConfig, plantumlConfig, siteConfig } from "./src/config";
 import I18nKey from "./src/i18n/i18nKey";
 import { i18n } from "./src/i18n/translation";
 import { GithubCardComponent } from "./src/plugins/rehype-component-github-card.mjs";
-import { ScriptCatCardComponent } from "./src/plugins/rehype-component-scriptcat-card.mjs";
+import rehypeScriptCatCard from "./src/plugins/rehype-component-scriptcat-card.mjs";
 import rehypeEmailProtection from "./src/plugins/rehype-email-protection.mjs";
 import rehypeExternalLinks from "./src/plugins/rehype-external-links.mjs";
 import rehypeFigure from "./src/plugins/rehype-figure.mjs";
@@ -235,10 +235,10 @@ export default defineConfig({
 					{
 						components: {
 							github: GithubCardComponent,
-							scriptcat: ScriptCatCardComponent,
 						},
 					},
 				],
+				rehypeScriptCatCard,
 				[
 					rehypeAutolinkHeadings,
 					{
