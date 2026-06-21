@@ -53,6 +53,32 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		],
 	});
 
+	// 工坊及其子菜单
+	links.push({
+		name: "工坊",
+		url: "#",
+		icon: "material-symbols:shop",
+		children: [
+			{
+				name: "编辑器",
+				url: "https://bwrite.youyer.top/",
+				external: true,
+				icon: "material-symbols:edit",
+			},
+			{
+				name: "User-Agent",
+				url: "https://gua.youyer.top",
+				external: true,
+				icon: "material-symbols:link",
+			},
+			{
+				name: "脚本猫脚本",
+				url: "/scriptcat/",
+				icon: "material-symbols:code",
+			},
+		],
+	});
+
 	// 关于及其子菜单
 	links.push({
 		name: "关于",
