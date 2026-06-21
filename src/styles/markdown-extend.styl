@@ -654,15 +654,23 @@ a.card-scriptcat
   border-radius: 0.75rem
   background: var(--card-bg)
   border: 1px solid var(--divider-color)
+  border-left: 3px solid var(--primary)
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06)
   transition: all 0.2s ease
   text-decoration: none !important
   cursor: pointer
+  position: relative
 
   &:hover
     border-color: var(--primary)
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08)
-    transform: translateY(-1px)
+    border-left-width: 3px
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1)
+    transform: translateY(-2px)
     text-decoration: none !important
+
+  &:active
+    transform: translateY(0)
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06)
 
   .sc-titlebar
     display: flex
@@ -690,5 +698,6 @@ a.card-scriptcat
 
   .sc-description
     font-size: 0.85rem
-    color: var(--text-color-secondary)
+    color: var(--primary)
     margin-top: 0.15rem
+    font-weight: 500
