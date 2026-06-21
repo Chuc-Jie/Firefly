@@ -28,12 +28,21 @@ export function ScriptCatCardComponent(properties, children) {
   const cardUuid = `SC${Math.random().toString(36).slice(-6)}`;
 
   // 4. 构建卡片结构（类似 GitHub 卡片布局）
-  // 标题栏：左侧脚本名 + 右侧图标
+  // 标题栏：左侧脚本名 + 右侧代码图标
+  const codeIcon = h("svg", {
+    width: "1em",
+    height: "1em",
+    viewBox: "0 0 24 24",
+    fill: "currentColor",
+  }, [
+    h("path", { d: "m8 18-6-6 6-6 1.425 1.425-4.6 4.6L9.4 16.6Zm8 0-1.425-1.425 4.6-4.6L14.6 7.4 16 6l6 6Z" }),
+  ]);
+
   const titleBar = h("div", { class: "sc-titlebar" }, [
     h("div", { class: "sc-titlebar-left" }, [
+      h("div", { class: "sc-logo" }, [codeIcon]),
       h("div", { class: "sc-title" }, fallbackName),
     ]),
-    h("div", { class: "sc-logo" }, "📜"),
   ]);
 
   const description = h("div", { class: "sc-description" }, "点击查看脚本详情 →");
