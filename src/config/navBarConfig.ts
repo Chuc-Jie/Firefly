@@ -119,7 +119,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 				icon: "fa7-brands:qq",
 			},
 			{
-				name: "官方Firefly文档",
+				name: "官方文档",
 				url: "https://docs-firefly.cuteleaf.cn",
 				external: true,
 				icon: "material-symbols:docs",
