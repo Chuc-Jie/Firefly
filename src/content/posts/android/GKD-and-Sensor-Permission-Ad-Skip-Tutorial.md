@@ -2,7 +2,7 @@
 title: 手机开屏广告自动跳过技术方案：懒人版
 published: 2026-03-23
 description: 两步搞定手机开屏广告：关闭传感器权限防“摇一摇”，安装GKD自动点击所有跳过按钮。无需root，一次配置永久生效。
-image: ./images/firefly1.avif
+image: ../images/firefly1.avif
 tags: [Android, GKD, 广告拦截, 无障碍, 教程]
 category: 技术教程
 draft: false

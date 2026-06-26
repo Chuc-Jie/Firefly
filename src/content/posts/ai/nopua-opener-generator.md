@@ -3,6 +3,8 @@ title: 一个让AI协作更坦诚的小工具：NoPUA 开场生成器
 published: 2026-03-25
 description: "受 NoPUA 项目启发，一个融入七种智慧、让 AI 协作更坦诚的开场白生成器。"
 tags: ["AI", "工具", "NoPUA", "开源"]
+category: 工具
+draft: false
 ---
 
 本文由AI基于与友野YouyEr对话、交互内容编写。
