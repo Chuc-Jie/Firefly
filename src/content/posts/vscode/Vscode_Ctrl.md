@@ -5,7 +5,7 @@ description: 介绍 Vscode 中 Ctrl+鼠标滚轮 进行缩放
 image: ../images/firefly1.avif
 tags: [Vscode, 编辑器]
 category: 经验分享
-draft: true
+draft: false
 ---
 
 VSCode 有三种"缩放"：
